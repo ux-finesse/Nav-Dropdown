@@ -1,0 +1,115 @@
+/*Nav Dropdown*/
+*{
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	list-style: none;
+}
+
+.wrapper{
+	width:90%;
+    border: 1px solid #19191913;
+	max-width:800px;
+	padding: 1rem;
+	margin:90px auto;
+}
+
+.st-accordion{
+    width:100%;
+    /* min-width:270px; */
+    margin: 0 auto;
+}
+
+.st-content{
+	padding: 1rem 0 0;
+}
+
+.st-accordion ul li{
+	height: auto;
+}
+
+/* .st-accordion ul li > a span{
+	visibility:hidden;
+} */
+
+
+.st-accordion ul li > a{
+	font-family: 'Josefin Slab',Georgia, serif;
+    text-shadow: 1px 1px 1px #fff;
+    font-size: 16px;
+    display: block;
+	font-weight: 600;
+	position: relative;
+	outline:none;
+	color: #191919;
+    -webkit-transition:  color 0.2s ease-in-out;
+	-moz-transition:  color 0.2s ease-in-out;
+	-o-transition:  color 0.2s ease-in-out;
+	-ms-transition:  color 0.2s ease-in-out;
+	transition:  color 0.2s ease-in-out;
+}
+.st-accordion ul li > a span{
+	background: transparent url(../images/arrow-circle-down.svg) no-repeat center center;
+	text-indent:-9000px;
+	width: 26px;
+	height: 14px;
+	position: absolute;
+	top: 50%;
+	right: -26px;
+	margin-top: -7px;
+	opacity:0;
+	-webkit-transition:  all 0.2s ease-in-out;
+	-moz-transition:  all 0.2s ease-in-out;
+	-o-transition:  all 0.2s ease-in-out;
+	-ms-transition:  all 0.2s ease-in-out;
+	transition:  all 0.2s ease-in-out;
+}
+
+.st-content ul li{
+	overflow: hidden;
+	font-family: 'Josefin Slab',Georgia, serif;
+	padding: 1rem 0;
+	color: #191919;
+	border-top: 1px solid #19191913;
+}
+
+.st-accordion ul a > li:hover{
+    color: #1693eb;
+}
+
+.st-accordion ul li > a:hover span{
+	opacity:1;
+	right: -5px;
+}
+
+.st-accordion ul li.st-open > a{
+    color: #1693eb;
+	font-weight: 600;
+}
+
+.st-accordion ul li.st-open > a span{
+	-webkit-transform:rotate(180deg);
+	-moz-transform:rotate(180deg);
+    transform:rotate(180deg);
+	right:-5px;
+	opacity:1;
+}
+@media screen and (max-width: 480px){
+
+	.dropdown{
+		margin: 0 1rem;
+	}
+
+	.wrapper{
+		width: auto;
+	}
+
+	.st-accordion ul a > li{
+		font-size:16px;
+	}
+
+	.st-accordion ul li > a span{
+		right: -5px;
+		opacity:100;
+	}
+}
